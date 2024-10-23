@@ -96,7 +96,7 @@ buttons.forEach((button) => {
       case "size-small":
         if (
           confirm(
-            "Are you sure? the beautiful designs you've made will be permanently lost (a very long time)"
+            "Are you sure? the beautiful designs you've made will be permanently lost (for a very long time)"
           )
         ) {
           updateSlider(16);
@@ -105,7 +105,7 @@ buttons.forEach((button) => {
       case "size-medium":
         if (
           confirm(
-            "Are you sure? the beautiful designs you've made will be permanently lost (a very long time)"
+            "Are you sure? the beautiful designs you've made will be permanently lost (for a very long time)"
           )
         ) {
           updateSlider(32);
@@ -114,7 +114,7 @@ buttons.forEach((button) => {
       case "size-large":
         if (
           confirm(
-            "Are you sure? the beautiful designs you've made will be permanently lost (a very long time)"
+            "Are you sure? the beautiful designs you've made will be permanently lost (for a very long time)"
           )
         ) {
           updateSlider(64);
@@ -126,7 +126,7 @@ buttons.forEach((button) => {
       case "clear":
         if (
           confirm(
-            "Are you sure? the beautiful designs you've made will be permanently lost (a very long time)"
+            "Are you sure? the beautiful designs you've made will be permanently lost (for a very long time)"
           )
         ) {
           createGrid(document.querySelector("#number-input").value);
