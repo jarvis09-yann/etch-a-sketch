@@ -94,19 +94,41 @@ buttons.forEach((button) => {
         currentColor = "random";
         return;
       case "size-small":
-        updateSlider(16);
+        if (
+          confirm(
+            "Are you sure? the beautiful designs you've made will be permanently lost (a very long time)"
+          )
+        ) {
+          updateSlider(16);
+        }
         return;
       case "size-medium":
-        updateSlider(32);
+        if (
+          confirm(
+            "Are you sure? the beautiful designs you've made will be permanently lost (a very long time)"
+          )
+        ) {
+          updateSlider(32);
+        }
         return;
       case "size-large":
-        updateSlider(64);
+        if (
+          confirm(
+            "Are you sure? the beautiful designs you've made will be permanently lost (a very long time)"
+          )
+        ) {
+          updateSlider(64);
+        }
         return;
       case "erase":
         currentColor = "white";
         return;
       case "clear":
-        if (confirm("Are you sure to delete?")) {
+        if (
+          confirm(
+            "Are you sure? the beautiful designs you've made will be permanently lost (a very long time)"
+          )
+        ) {
           createGrid(document.querySelector("#number-input").value);
           return;
         }
@@ -117,4 +139,8 @@ buttons.forEach((button) => {
 closeButton.addEventListener("click", () => {
   document.querySelector("footer").style.display = "none";
   document.querySelector(".game-container").style.height = "100vh";
+});
+
+window.addEventListener("beforeunload", (e) => {
+  e.preventDefault();
 });
