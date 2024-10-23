@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]>      <html class="no-js"> <!--<![endif]-->
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>Etch a Sketch!</title>
+    <meta
+      name="description"
+      content="A simple website to make to make pixel art sketches"
+    />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <!--[if lt IE 7]>
+      <p class="browsehappy">
+        You are using an <strong>outdated</strong> browser. Please
+        <a href="#">upgrade your browser</a> to improve your experience.
+      </p>
+    <![endif]-->
+    <div class="body-container">
+      <div class="grid-container"></div>
+      <div class="controls">
+        <div class="controls-title">
+          <h1>Etch A Sketch!</h1>
+        </div>
+        <div class="controls-body">
+          <h2>Settings</h2>
+          <h3>Colors</h3>
+          <div class="color-settings-container settings-container">
+            <button id="rainbow">Rainbow</button>
+            <button id="black">Black</button>
+          </div>
+          <h3>Size</h3>
+          <div class="size-settings-container settings-container">
+            <button id="size-small">Small (16)</button>
+            <button id="size-medium">Medium (32)</button>
+            <button id="size-large">Large (64)</button>
+          </div>
+          <div class="custom-size-container settings-container">
+            <input
+              type="number"
+              id="number-input"
+              class="size-custom-number"
+              min="2"
+              max="100"
+              value="16"
+              onchange="updateSlider(this.value)"
+            />
+            <input
+              type="range"
+              min="2"
+              max="100"
+              value="16"
+              class="size-custom-number"
+              id="slider-input"
+              onchange="updateSlider(this.value)"
+            />
+            <!-- <button id="size-custom-submit">Submit</button> -->
+          </div>
+          <h3>Errasing</h3>
+          <div class="errasing-settings-container settings-container">
+            <button id="erase">Erase</button>
+            <button id="clear">Clear</button>
+          </div>
+          <!-- <hr /> -->
+        </div>
+      </div>
+    </div>
+    <footer>
+      <p>
+        Made by <a href="https://github.com/jarvis09-yann">jarvis09</a> for
+        <a href="https://www.theodinproject.com/">TOP</a> -
+        <a href="https://github.com/jarvis09-yann/rock-papers-scissors"
+          >Github repo</a
+        >
+      </p>
+      <div class="close-button-container">
+        <p id="close-button">&#10006;</p>
+      </div>
+    </footer>
+    <script src="./app.js" async defer></script>
+  </body>
+</html>
